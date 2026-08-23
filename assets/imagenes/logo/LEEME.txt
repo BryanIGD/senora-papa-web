@@ -1,0 +1,17 @@
+CARPETA: LOGO
+=============
+
+Deja aquí:
+
+  logo.png          <- El logo a color, CON FONDO TRANSPARENTE
+                       Mínimo 512 píxeles de alto.
+                       Debe ser .png (el .jpg no da transparencia)
+
+  logo-blanco.png   <- Opcional. El mismo logo todo en blanco,
+                       para el pie de página que es oscuro.
+
+ESTE ES EL ARCHIVO MÁS IMPORTANTE DEL SITIO.
+Los colores de todas las páginas se toman de este logo, para que
+la web y el letrero del local se vean como la misma marca.
+
+Guía completa: ..\LEEME.txt

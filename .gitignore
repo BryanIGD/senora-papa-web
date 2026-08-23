@@ -1,0 +1,10 @@
+# Fotos originales sin optimizar — viven solo en la máquina de origen.
+# Pesan 23 MB y no hacen falta para que el sitio funcione: lo que se publica
+# son las versiones ya achicadas que están en assets/imagenes/.
+originales/
+
+# Basura que crean los sistemas operativos
+Thumbs.db
+desktop.ini
+.DS_Store
+._*

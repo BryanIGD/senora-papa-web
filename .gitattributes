@@ -1,0 +1,14 @@
+# Normaliza los finales de línea al guardar en el repositorio.
+# Sin esto, al pasar de Windows a Mac cada archivo aparecería como
+# "modificado entero" aunque no se haya tocado ni una letra.
+* text=auto eol=lf
+
+# Los scripts de PowerShell se quedan con finales de línea de Windows.
+*.ps1 text eol=crlf
+
+# Las imágenes nunca se tocan.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.ico  binary

@@ -1,0 +1,66 @@
+CARPETA: HERO (portada)
+=======================
+
+Las 3 imagenes grandes que van rotando en la parte de arriba de
+la pagina de inicio. Son lo primero que ve el cliente.
+
+  hero-1.jpg   El plato de pollo, en primer plano
+  hero-2.jpg   El combo con la gaseosa
+  hero-3.jpg   Del carrito al local (la historia del negocio)
+
+  Tamano: 1920 x 1080 pixeles (horizontal, proporcion 16:9)
+  Peso:   menos de 400 KB cada una
+  Formato: .jpg   (un .png no aparece, ver mas abajo)
+
+Las tres estan listas. Los archivos originales en .png quedaron
+guardados en  originales\hero\  por si hicieran falta.
+
+
+---------------------------------------------------------------
+DONDE PUEDE IR EL MOTIVO DE LA FOTO
+---------------------------------------------------------------
+
+Encima de la portada, el sitio pone:
+
+  1. Un velo oscuro, mas fuerte a la izquierda
+  2. El titular en blanco, ocupando desde el borde izquierdo
+     hasta un 52% del ancho, mas o menos
+
+Por eso lo importante de la foto conviene que este a la DERECHA,
+a partir del 55% del ancho. Lo que quede a la izquierda va a
+aparecer oscurecido y con letras encima.
+
+  BIEN:  el plato a la derecha, fondo liso a la izquierda
+  MAL:   algo importante a la izquierda o repartido por todo
+         el ancho (el titular lo tapa por la mitad)
+
+
+---------------------------------------------------------------
+EL RECORTE CAMBIA SEGUN LA PANTALLA
+---------------------------------------------------------------
+
+La imagen se muestra recortada para llenar el espacio:
+
+  En computadora:  se recorta ARRIBA y ABAJO (un 10% por lado)
+  En celular:      se recorta por los LADOS, y bastante
+
+En celular el recorte esta corrido al 74% hacia la derecha,
+justamente para que la comida entre en cuadro. Si alguna vez
+pones una foto con el motivo centrado, avisa para ajustar ese
+valor en css\estilos.css (busca "object-position").
+
+Conclusion: no pongas nada importante pegado a los bordes.
+
+
+---------------------------------------------------------------
+SI LAS NUEVAS VIENEN EN .PNG
+---------------------------------------------------------------
+
+El sitio solo busca archivos .jpg. Un .png no aparece aunque el
+nombre este bien escrito, y ademas suele pesar 2 MB o mas.
+
+Dejalas en esta carpeta y avisa: se convierten a .jpg, se
+ajustan a 1920x1080 y bajan a unos 300 KB, sin diferencia
+visible.
+
+Guia completa: ..\LEEME.txt

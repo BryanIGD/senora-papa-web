@@ -1,0 +1,9 @@
+# Señora Papa - Latacunga, Ecuador
+# Permite que Google y los demás buscadores indexen todo el sitio.
+
+User-agent: *
+Allow: /
+
+# IMPORTANTE: cambia "www.ejemplo.com.ec" por el dominio real
+# cuando el sitio esté publicado.
+Sitemap: https://www.ejemplo.com.ec/sitemap.xml

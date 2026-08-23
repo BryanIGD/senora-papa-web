@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es-EC">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+  Página que se muestra cuando alguien entra a una dirección que no existe
+  (por ejemplo, si escribe mal el enlace o si se borró una página).
+  En Netlify y Cloudflare Pages funciona sola: basta con que el archivo se
+  llame 404.html y esté en la carpeta principal.
+-->
+
+<title>Página no encontrada | Señora Papa</title>
+<meta name="robots" content="noindex">
+
+<meta name="theme-color" content="#35A9A1">
+
+<link rel="icon" href="assets/iconos/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/iconos/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/iconos/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<!-- ======================= INICIO ENCABEZADO ======================= -->
+<header class="encabezado">
+  <div class="contenedor encabezado__interior">
+    <a class="logo" href="index.html">
+      <img src="assets/imagenes/logo/logo-nombre.png" alt="Señora Papa" width="259" height="160">
+      <span class="logo__texto" hidden>Señora<span> Papa</span></span>
+    </a>
+    <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+      <ul class="nav__lista">
+        <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+        <li><a class="nav__enlace" href="menu.html">Nuestra Carta</a></li>
+        <li><a class="nav__enlace" href="ubicacion.html">Ubicación</a></li>
+        <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- ======================== FIN ENCABEZADO ========================= -->
+
+<main>
+  <section class="seccion" style="text-align: center;">
+    <div class="contenedor">
+
+      <img src="assets/imagenes/logo/logo-mascota.png"
+           alt=""
+           width="478" height="512"
+           style="height: 190px; width: auto; margin: 0 auto var(--espacio-5);">
+
+      <p class="eyebrow">Error 404</p>
+      <h1 style="margin-bottom: var(--espacio-4);">Esta página se nos quemó</h1>
+      <p class="subtitulo" style="margin: 0 auto var(--espacio-7);">
+        La dirección que buscas no existe o cambió de lugar. Pero la carta sigue
+        estando donde siempre.
+      </p>
+
+      <div class="acciones acciones--centrado">
+        <a class="boton boton--principal" href="index.html">Volver al inicio</a>
+        <a class="boton boton--secundario" href="menu.html">Ver la carta</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ========================= INICIO PIE =========================== -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__final" style="border-top: none;">
+      <p>&copy; <span data-anio>2026</span> Señora Papa. Todos los derechos reservados.</p>
+      <p>Latacunga · Cotopaxi · Ecuador</p>
+    </div>
+  </div>
+</footer>
+<!-- ========================== FIN PIE ============================= -->
+
+<script src="js/principal.js" defer></script>
+</body>
+</html>

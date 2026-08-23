@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es-EC">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  ============================================================================
+  NUESTRA HISTORIA
+  ----------------------------------------------------------------------------
+  La historia de esta página es la REAL del negocio:
+
+    2015          La señora Karlita abre un puesto de papipollos frente al
+                  colegio Fernando Ruiz, en el sur de Latacunga.
+    Con los años  El puesto sigue en la misma esquina y crece hasta el carro
+                  de acero de hoy, "Las Deliciosas Papitas del Ruiz".
+    2026          Se abre el local de Señora Papa, en la Av. Benjamín Terán
+                  y Av. Amazonas (ex redondel de la FAE).
+
+  Cada etapa tiene su foto, en assets/imagenes/historia/:
+      fundadores.jpg     el puesto de 2015
+      puesto-actual.jpg  el puesto hoy
+      local.jpg          el local
+
+  Falta reemplazar los datos de ejemplo entre corchetes: [FUNDADOR] y los
+  años [AÑO1] … [AÑO4].
+  ============================================================================
+-->
+
+  <title>Nuestra Historia | Señora Papa Latacunga</title>
+  <meta name="description"
+    content="En 2015 la señora Karlita empezó vendiendo papipollos frente al colegio Fernando Ruiz. Hoy Señora Papa tiene local propio en Latacunga, con la misma receta.">
+
+  <link rel="canonical" href="https://www.ejemplo.com.ec/historia.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:site_name" content="Señora Papa">
+  <meta property="og:title" content="Nuestra Historia | Señora Papa Latacunga">
+  <meta property="og:description"
+    content="De un puesto frente a un colegio en 2015 a un local propio. La historia de Señora Papa.">
+  <meta property="og:image" content="https://www.ejemplo.com.ec/assets/imagenes/historia/local.jpg">
+  <meta property="og:url" content="https://www.ejemplo.com.ec/historia.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="#35A9A1">
+
+  <link rel="icon" href="assets/iconos/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/iconos/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/iconos/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <a class="saltar-al-contenido" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== INICIO BARRA SUPERIOR ===================== -->
+  <div class="barra-superior">
+    <div class="contenedor barra-superior__interior">
+      <span class="barra-superior__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          aria-hidden="true">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 2" />
+        </svg>
+        <span data-horario-hoy>Lunes a sábado de 10:00 a 22:00</span>
+      </span>
+      <span class="barra-superior__item barra-superior__item--secundario">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        Av. Benjamín Terán y Av. Amazonas, Latacunga
+      </span>
+    </div>
+  </div>
+  <!-- ====================== FIN BARRA SUPERIOR ======================= -->
+
+  <!-- ======================= INICIO ENCABEZADO ======================= -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+
+      <a class="logo" href="index.html">
+        <img src="assets/imagenes/logo/logo-nombre.png" alt="Señora Papa" width="259" height="160">
+        <span class="logo__texto" hidden>Señora<span> Papa</span></span>
+      </a>
+
+      <button class="menu-boton" type="button" aria-expanded="false" aria-controls="nav-principal"
+        aria-label="Abrir menú de navegación">
+        <span class="menu-boton__barras"></span>
+      </button>
+
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="menu.html">Nuestra Carta</a></li>
+          <li><a class="nav__enlace" href="historia.html" aria-current="page">Nuestra Historia</a></li>
+          <li><a class="nav__enlace" href="ubicacion.html">Ubicación</a></li>
+          <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
+        </ul>
+        <a class="boton boton--principal boton--sm" href="menu.html">Ver la carta</a>
+      </nav>
+
+    </div>
+  </header>
+  <!-- ======================== FIN ENCABEZADO ========================= -->
+
+  <main id="contenido">
+
+    <!-- ===================== ENCABEZADO DE PÁGINA =================== -->
+    <section class="hero-pagina hero-pagina--naranja">
+      <div class="contenedor hero-pagina__contenido">
+        <p class="eyebrow">De dónde venimos</p>
+        <h1>Nuestra Historia</h1>
+        <p>Un puesto de papipollos a la salida del colegio, y más de diez años vendiendo en la misma acera. Así
+          llegamos hasta aquí.</p>
+      </div>
+    </section>
+
+    <!-- ======================= 2015: EL COMIENZO ==================== -->
+    <section class="seccion seccion--crema">
+      <div class="contenedor">
+        <div class="partido">
+
+          <div class="partido__media">
+            <div class="marco-img" data-etiqueta="fundadores.jpg">
+              <img src="assets/imagenes/historia/fundadores.jpg"
+                alt="El primer puesto de Señora Papa en 2015, frente al colegio Fernando Ruiz" width="892" height="669"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="partido__texto">
+            <p class="eyebrow">2015</p>
+            <h2>Un puesto a la salida del colegio</h2>
+            <p>
+              La señora Karlita empezó vendiendo papipollos frente al colegio
+              Fernando Ruiz, en el sur de Latacunga. El puesto era una carpa y un
+              mostrador, y la fila la hacían los estudiantes al salir de clases.
+            </p>
+            <p>
+              Ahí se armó todo lo demás: el punto de la papa, el pollo crocante y la
+              costumbre de servir porciones generosas que caracterizan a
+              <em>&laquo;Las Deliciosas Papitas del Ruiz&raquo;</em>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== EL PUESTO, HOY ========================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="partido partido--invertido">
+
+          <div class="partido__media">
+            <div class="marco-img" data-etiqueta="puesto-actual.jpg">
+              <img src="assets/imagenes/historia/puesto-actual.jpg"
+                alt="El puesto de Señora Papa hoy, en la misma esquina frente al colegio" width="1200" height="900"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="partido__texto">
+            <p class="eyebrow">Con los años</p>
+            <h2>La misma ubicación, el puesto más grande</h2>
+            <p>
+              Nunca nos movimos de ahí. Lo que cambió fue el puesto: hoy es un carro
+              de acero, con vitrina de vidrio y su propio letrero,
+              <em>&laquo;Las Deliciosas Papitas del Ruiz&raquo;</em>.
+            </p>
+            <p>
+              Sigue abierto, en el mismo sitio de siempre, la misma deliciosa sazón y la mejor atención.
+              Muchos de aquellos estudiantes ya son grandes y todavía se pasan a
+              comprar.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== LA CITA =========================== -->
+    <section class="seccion seccion--oscura">
+      <div class="contenedor">
+        <figure class="cita">
+          <blockquote>
+            &laquo;Empecé con una carpa y muchas ganas. Hoy tengo un local,
+            y sigo atendiendo a cada persona con el mismo cariño.&raquo;
+          </blockquote>
+          <figcaption>Señora Karlita &middot; Fundadora</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= 2026: EL LOCAL ============================ -->
+    <section class="seccion seccion--crema">
+      <div class="contenedor">
+        <div class="partido">
+
+          <div class="partido__media">
+            <div class="marco-img" data-etiqueta="local.jpg">
+              <img src="assets/imagenes/historia/local.jpg"
+                alt="El local de Señora Papa en la Av. Benjamín Terán y Av. Amazonas" width="990" height="742"
+                loading="lazy">
+            </div>
+          </div>
+
+          <div class="partido__texto">
+            <p class="eyebrow">2026</p>
+            <h2>Abrimos Señora Papa</h2>
+            <p>
+              Este año dimos el paso más grande: un local propio, con mesas y espacio
+              para sentarse a comer con calma. Está al norte de Latacunga, en la
+              Av. Benjamín Terán y Av. Amazonas, en el ex redondel de la FAE.
+            </p>
+            <p>
+              La carta creció y llegaron las mixtas, las dobles, las triples y los
+              combos. La receta, esa sigue siendo la misma de 2015.
+            </p>
+            <div class="acciones">
+              <a class="boton boton--principal" href="menu.html">Ver la carta</a>
+              <a class="boton boton--secundario" href="ubicacion.html">Cómo llegar</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= LOS VALORES ======================== -->
+    <section class="seccion">
+      <div class="contenedor">
+
+        <div class="seccion__encabezado">
+          <p class="eyebrow">Lo que no cambia</p>
+          <h2>Qué nos hace diferentes</h2>
+          <p class="subtitulo">Tres cosas que hacemos igual desde el primer día.</p>
+        </div>
+
+        <div class="rejilla rejilla--3">
+
+          <div class="valor">
+            <span class="valor__icono">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z" />
+                <path d="M2 21c0-3 1.9-5.4 5-6" />
+              </svg>
+            </span>
+            <h3>Preparado al momento</h3>
+            <p>
+              La papa se fría cuando la pides, igual que en el puesto. Nada
+              precocido, nada recalentado del día anterior.
+            </p>
+          </div>
+
+          <div class="valor">
+            <span class="valor__icono">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 21s-7-4.4-9.3-8.5A5.4 5.4 0 0 1 12 6.5a5.4 5.4 0 0 1 9.3 6C19 16.6 12 21 12 21z" />
+              </svg>
+            </span>
+            <h3>La misma receta de 2015</h3>
+            <p>
+              El adobo del pollo y el punto de la papa son los mismos del primer
+              puesto. Es lo único del negocio que no hemos cambiado nunca.
+            </p>
+          </div>
+
+          <div class="valor">
+            <span class="valor__icono">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9.5" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+              </svg>
+            </span>
+            <h3>Negocio de familia</h3>
+            <p>
+              Lo empezó la señora Karlita y lo seguimos atendiendo entre la familia.
+              Aquí no hay número de turno: hay gente que te conoce.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== LLAMADA FINAL ========================= -->
+    <section class="franja-cta">
+      <div class="contenedor">
+        <h2>Ven a probar de qué se trata</h2>
+        <p>Estamos al norte de Latacunga. Pásate cualquier día y pide lo que más te llame la atención.</p>
+        <div class="acciones acciones--centrado">
+          <a class="boton boton--claro" href="ubicacion.html">Cómo llegar</a>
+          <a class="boton boton--fantasma" href="menu.html">Ver la carta</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================= INICIO PIE =========================== -->
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie__rejilla">
+
+        <div class="pie__logo">
+          <img src="assets/imagenes/logo/logo-completo.png" alt="Señora Papa" width="469" height="440">
+          <p class="pie__descripcion">Salchipapas y papas con pollo, carne y huevo, preparadas al momento en Latacunga.
+          </p>
+          <div class="redes">
+            <a href="https://www.facebook.com/people/Se%C3%B1ora-Papa/61593310995960/" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/senora.papa.latacunga" aria-label="Instagram" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="https://tiktok.com/@senora.papa" aria-label="TikTok" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M16.6 5.8a4.9 4.9 0 0 1-1.1-2.8h-3v12.1a2.5 2.5 0 1 1-1.8-2.4V9.6a5.6 5.6 0 1 0 4.8 5.5V9.4a7.9 7.9 0 0 0 4.5 1.4V7.8a4.8 4.8 0 0 1-3.4-2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="pie__titulo">Navegación</h3>
+          <ul class="pie__lista">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Nuestra Carta</a></li>
+            <li><a href="historia.html">Nuestra Historia</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="pie__titulo">La Carta</h3>
+          <ul class="pie__lista">
+            <li><a href="menu.html#individuales">Individuales</a></li>
+            <li><a href="menu.html#mixtas">Mixtas</a></li>
+            <li><a href="menu.html#dobles">Dobles</a></li>
+            <li><a href="menu.html#triples">Triples</a></li>
+            <li><a href="menu.html#combos">Combos</a></li>
+            <li><a href="menu.html#extras">Extras</a></li>
+            <li><a href="menu.html#bebidas">Bebidas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="pie__titulo">Dónde estamos</h3>
+          <ul class="pie__lista pie__contacto">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Av. Benjamín Terán y Av. Amazonas<br>Latacunga, Cotopaxi</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg>
+              <span data-horario-hoy>Lunes a sábado de 10:00 a 22:00</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pie__final">
+        <p>&copy; <span data-anio>2026</span> Señora Papa. Todos los derechos reservados.</p>
+        <p>Latacunga · Cotopaxi · Ecuador</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ========================== FIN PIE ============================= -->
+
+  <script src="js/principal.js" defer></script>
+</body>
+
+</html>

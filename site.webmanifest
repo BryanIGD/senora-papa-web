@@ -1,0 +1,23 @@
+{
+  "name": "Señora Papa",
+  "short_name": "Señora Papa",
+  "description": "Salchipapas y papas con pollo, carne, salchicha y huevo desde $1,00. Latacunga, Ecuador.",
+  "lang": "es-EC",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFF9EC",
+  "theme_color": "#35A9A1",
+  "icons": [
+    {
+      "src": "/assets/iconos/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/iconos/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
