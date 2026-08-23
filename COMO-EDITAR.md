@@ -11,13 +11,10 @@ porque colorea el texto y es más difícil equivocarse.
 
 ---
 
-## ⚠️ ANTES DE PUBLICAR: lo que falta por completar
+## ✅ El sitio ya está publicado
 
-Ya solo queda **un** dato de ejemplo por cambiar: el dominio.
-
-| Buscar esto | Reemplazar por | Dónde aparece |
-|---|---|---|
-| `www.ejemplo.com.ec` | El dominio real | Las 5 páginas + sitemap.xml + robots.txt |
+Está en línea en <https://senorapapa.com>. Ya no quedan datos de ejemplo por
+reemplazar: los precios, la dirección, los horarios y las redes son los reales.
 
 **Las tres redes ya están puestas:**
 
@@ -328,32 +325,33 @@ como se lo contarías a un cliente en el mostrador.
 
 ## 8. Publicar el sitio
 
-El sitio no necesita servidor especial ni base de datos: son archivos sueltos.
+El sitio vive en **Cloudflare Pages** (gratis) y está conectado al repositorio
+de GitHub.
 
-**La opción más simple (gratis):**
+**No hay que arrastrar carpetas ni entrar a ningún panel para actualizarlo.**
+Cada vez que subes un cambio desde la terminal:
 
-1. Entra a <https://app.netlify.com/drop>
-2. Arrastra la carpeta `Website` completa a la ventana.
-3. Listo: te da una dirección al instante, con candado de seguridad (HTTPS).
+```bash
+git add .
+git commit -m "Lo que cambiaste"
+git push
+```
 
-Después puedes conectar un dominio propio (`señorapapa.com.ec` o similar)
-desde el panel de Netlify.
+Cloudflare lo detecta solo y republica el sitio en unos 30 segundos. Eso es
+todo.
 
-**Alternativa igual de buena:** <https://pages.cloudflare.com>
+### Si un cambio sale mal
 
-### Para actualizar después
+En el panel de Cloudflare, dentro del proyecto `senora-papa-web`, cada
+publicación anterior tiene un botón para volver a ella en un clic. No se pierde
+nada.
 
-Cambias los archivos en tu computadora y vuelves a arrastrar la carpeta. Se
-reemplaza todo.
+### Cosas que se hacen una sola vez
 
-### Cuando ya esté publicado
-
-1. Reemplaza `www.ejemplo.com.ec` por el dominio real en las 5 páginas,
-   en `sitemap.xml` y en `robots.txt`.
-2. Registra el sitio en <https://search.google.com/search-console> para que
-   Google lo encuentre.
-3. Comprueba que el enlace se vea bien al compartirlo por WhatsApp.
-4. Verifica los datos de Google en
+1. Registrar el sitio en <https://search.google.com/search-console> y subir ahí
+   el `sitemap.xml`, para que Google lo encuentre.
+2. Comprobar que el enlace se vea bien al compartirlo por Facebook o Instagram.
+3. Verificar los datos del negocio en
    <https://search.google.com/test/rich-results>
 
 ---

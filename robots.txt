@@ -4,6 +4,4 @@
 User-agent: *
 Allow: /
 
-# IMPORTANTE: cambia "www.ejemplo.com.ec" por el dominio real
-# cuando el sitio esté publicado.
-Sitemap: https://www.ejemplo.com.ec/sitemap.xml
+Sitemap: https://senorapapa.com/sitemap.xml
