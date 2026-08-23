@@ -13,14 +13,10 @@ porque colorea el texto y es más difícil equivocarse.
 
 ## ⚠️ ANTES DE PUBLICAR: lo que falta por completar
 
-El sitio está armado pero todavía tiene **datos de ejemplo**. Busca y reemplaza
-estos textos en TODOS los archivos `.html`. Aparecen siempre entre corchetes,
-así que son fáciles de encontrar.
+Ya solo queda **un** dato de ejemplo por cambiar: el dominio.
 
 | Buscar esto | Reemplazar por | Dónde aparece |
 |---|---|---|
-| `[FUNDADOR]` | Quién empezó el negocio | historia.html |
-| `[AÑO1]` … `[AÑO4]` | Los años de cada hito | historia.html |
 | `www.ejemplo.com.ec` | El dominio real | Las 5 páginas + sitemap.xml + robots.txt |
 
 **Las tres redes ya están puestas:**
