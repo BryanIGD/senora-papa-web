@@ -5,6 +5,8 @@ Sitio web estático del restaurante **Señora Papa** (Latacunga, Cotopaxi, Ecuad
 Es un sitio informativo: muestra la carta con precios, la ubicación y las
 formas de contacto. **No procesa pagos ni recibe pedidos.**
 
+🌐 **En línea: <https://senorapapa.com>**
+
 👉 **Para editar el contenido, lee [COMO-EDITAR.md](COMO-EDITAR.md).**
 
 ---
@@ -17,14 +19,14 @@ formas de contacto. **No procesa pagos ni recibe pedidos.**
 | Nuestra Carta | `menu.html` | Todos los platos **con precios**, agrupados por categoría |
 | Nuestra Historia | `historia.html` | Relato, línea de tiempo y valores del negocio |
 | Ubicación | `ubicacion.html` | Mapa, dirección, horarios y cómo llegar |
-| Contacto | `contacto.html` | WhatsApp, teléfono, correo, redes y formulario |
+| Contacto | `contacto.html` | Redes sociales, horarios y preguntas frecuentes |
 | Error 404 | `404.html` | Página para direcciones que no existen |
 
 ## Cómo está hecho
 
 HTML, CSS y JavaScript puros. **Sin frameworks, sin dependencias, sin paso de
 compilación.** Para ver el sitio basta con abrir `index.html`; para publicarlo,
-basta con subir la carpeta.
+basta con hacer `git push`.
 
 Se hizo así a propósito: es un sitio que cambia poco, y quien lo mantenga no
 necesita instalar Node, npm ni aprender ninguna herramienta. Un precio se
@@ -35,16 +37,13 @@ Website/
 ├── index.html · menu.html · historia.html · ubicacion.html · contacto.html
 ├── 404.html
 ├── css/estilos.css          Todos los estilos. Los colores están arriba del todo.
-├── js/principal.js          Menú móvil, portada rotativa, horarios, formulario.
-│                            👉 El WhatsApp y los horarios se configuran aquí.
+├── js/principal.js          Menú móvil, portada rotativa, horarios, año del pie.
+│                            👉 Los horarios se configuran aquí.
 ├── assets/
-│   ├── imagenes/            Fotos, cada una en su carpeta (con su LEEME.txt)
+│   ├── imagenes/            Fotos, cada una en su carpeta
 │   │   ├── logo/  hero/  productos/  local/  historia/
 │   │   └── compartir.jpg    Imagen que se ve al compartir el enlace
 │   └── iconos/              Iconos de pestaña y de celular
-├── herramientas/
-│   └── optimizar-imagenes.ps1   Achica las fotos pesadas del celular
-│                            (PowerShell: corre en Windows, no en Mac)
 ├── sitemap.xml · robots.txt · site.webmanifest
 ├── COMO-EDITAR.md           👈 Guía completa de edición
 └── README.md
@@ -68,10 +67,10 @@ hereda solo.
 puede leer y se ven aunque falle el JavaScript — que es justamente el
 contenido por el que la gente entra al sitio.
 
-**El formulario de contacto abre WhatsApp** con el mensaje ya escrito, en vez
-de enviar un correo. Un sitio estático no tiene servidor que reciba mensajes, y
-esta forma no obliga a contratar ningún servicio externo. En `COMO-EDITAR.md`
-está explicado cómo cambiarlo por correo si algún día se prefiere.
+**No hay formulario de contacto, ni teléfono, ni correo publicados.** El
+contacto es por Facebook, Instagram y TikTok, que es donde el negocio ya
+responde todos los días. Un sitio estático tampoco tendría servidor que reciba
+mensajes, así que no se pierde nada y no hay que contratar ningún servicio.
 
 **Si falta una foto, no se rompe nada.** En su lugar aparece un recuadro con el
 nombre del archivo que falta, para saber cuál hay que agregar.
@@ -86,14 +85,14 @@ incluidos), conviene levantar un servidor local:
 En Windows (PowerShell):
 
 ```powershell
-cd "c:\Users\darku\Documents\Projects\Website"
+cd "$HOME\Documents\Projects\senora-papa-web"
 python -m http.server 8000
 ```
 
 En Mac (Terminal):
 
 ```bash
-cd ~/Documents/Projects/Website
+cd ~/Documents/Projects/senora-papa-web
 python3 -m http.server 8000
 ```
 
@@ -101,8 +100,9 @@ Y abrir <http://localhost:8000>
 
 ## Publicar
 
-Arrastrar la carpeta completa a <https://app.netlify.com/drop>. Da una
-dirección con HTTPS al instante y permite conectar un dominio propio después.
+El sitio está en **Cloudflare Pages**, conectado a este repositorio de GitHub.
+No hay que entrar a ningún panel: cada `git push` a `main` republica
+<https://senorapapa.com> en unos 30 segundos.
 
-Antes de publicar, revisar la lista de pendientes que está al inicio de
-[COMO-EDITAR.md](COMO-EDITAR.md).
+Si una publicación sale mal, en el panel de Cloudflare cada versión anterior
+tiene un botón para volver a ella en un clic.

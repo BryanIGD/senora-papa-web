@@ -2,8 +2,13 @@
 
 Guía para cambiar el contenido del sitio sin saber programar.
 
-**Regla de oro:** antes de tocar cualquier archivo, haz una copia de seguridad
-de la carpeta completa. Si algo sale mal, restauras la copia y listo.
+**Regla de oro:** ya no hace falta copiar la carpeta a mano. El proyecto está
+en Git, que guarda cada versión anterior. Si algo sale mal y todavía no lo has
+subido, esto deshace tus cambios y deja el archivo como estaba:
+
+```bash
+git restore nombre-del-archivo.html
+```
 
 Para editar los archivos sirve el **Bloc de notas** de Windows, pero es mucho
 más cómodo usar **Visual Studio Code** (gratis, en <https://code.visualstudio.com>),
@@ -121,34 +126,23 @@ Agrega una de estas líneas justo después de la línea `<div class="marco-img".
 
 ---
 
-## 3. Cambiar el WhatsApp y los horarios
+## 3. Cambiar los horarios
 
-Estos **no** se cambian en las páginas. Se cambian **una sola vez** en
-**`js/principal.js`**, arriba del todo:
+**No** se cambian en las páginas. Se cambian en **`js/principal.js`**, arriba
+del todo:
 
 ```js
 var NEGOCIO = {
-  whatsapp: '593000000000',
-  ...
   horarios: {
-    domingo:   ['11:00', '20:00'],
+    domingo:   null,
     lunes:     ['10:00', '22:00'],
+    martes:    ['10:00', '22:00'],
     ...
   }
 };
 ```
 
-### El número de WhatsApp
-
-Va el código de país + el número, **todo junto**, sin `+`, sin espacios, sin
-guiones y **sin el 0 inicial**:
-
-| Número local | Se escribe |
-|---|---|
-| `098 765 4321` | `593987654321` |
-| `099 123 4567` | `593991234567` |
-
-### Los horarios
+### Cómo se escriben
 
 Se usan en formato de 24 horas. Un día cerrado se escribe `null`:
 
@@ -204,10 +198,7 @@ cinco lugares mencionados arriba (busca `-0.925556` en los archivos).
 
 ## 5. Cambiar las fotos
 
-Las fotos van en `assets/imagenes/`, cada una en su carpeta. En cada carpeta
-hay un `LEEME.txt` que explica qué va ahí y en qué tamaño.
-
-Resumen:
+Las fotos van en `assets/imagenes/`, cada una en su carpeta:
 
 | Carpeta | Qué va | Tamaño | Peso |
 |---|---|---|---|
@@ -221,8 +212,8 @@ Resumen:
 escrito en el HTML. Todo en minúsculas, sin tildes, sin espacios, con guiones:
 `papipollo.jpg`, `mixta-1.jpg`, `combo-2.jpg`.
 
-La **lista completa** de las fotos que la página está esperando está en
-`assets/imagenes/productos/LEEME.txt`.
+Para saber qué fotos espera la página, búscalas en el HTML: cada una aparece
+como `<img src="assets/imagenes/...">`.
 
 Mientras una foto no exista, en su lugar sale un recuadro con el nombre del
 archivo que falta. No es un error: es para que sepas cuál te falta. Apenas
@@ -234,24 +225,14 @@ Las fotos de los platos están tomadas sobre un fondo verde (croma). Ese verde
 hay que quitarlo antes de subirlas, si no el plato se ve con un recuadro verde
 alrededor.
 
-Déjalas en `assets/imagenes/productos/` tal como estén y ejecuta:
+Las fotos que ya están en el sitio vienen limpias. Si algún día tomas fotos
+nuevas sobre el fondo verde, se lo puedes quitar en <https://www.photopea.com>
+(gratis, en el navegador) o en <https://www.remove.bg>.
 
-```
-herramientas\quitar-fondo-verde.ps1
-```
-
-(clic derecho sobre el archivo → **Ejecutar con PowerShell**)
-
-El script hace cuatro cosas: quita el verde, suaviza los bordes para que el
-envase no quede recortado a lo bruto, **elimina el reflejo verdoso que el fondo
-deja sobre el envase blanco**, y reduce el peso del archivo. También renombra
-la foto al nombre que espera la página.
-
-No toca las fotos que ya están limpias, así que se puede ejecutar las veces que
-haga falta. Los archivos originales no se borran: se guardan en `originales/`.
-
-> `originales/` es solo un respaldo. No hace falta subirla al servidor y se
-> puede borrar sin que pase nada.
+> Esto antes lo hacía un script de PowerShell que ya no está en el proyecto,
+> porque solo corría en Windows. Si algún día vuelve a hacer falta, sigue
+> guardado en el historial de Git:
+> `git log --diff-filter=D -- herramientas/`
 
 ### Las fotos del celular pesan demasiado
 
@@ -259,16 +240,11 @@ Una foto de celular pesa entre 3 MB y 8 MB, unas 20 veces más de lo que
 debería. Si subes el sitio así, va a tardar muchísimo en abrir con datos
 móviles y la gente se va antes de que cargue.
 
-Para arreglarlo, haz doble clic en:
+Para arreglarlo, pasa cada foto por <https://squoosh.app>: la abres, eliges
+**JPG** a la derecha, bajas la calidad hasta un 75 % y descargas. Una foto de
+5 MB queda en unos 200 KB y a simple vista se ve igual.
 
-```
-herramientas/optimizar-imagenes.ps1
-```
-
-(o clic derecho → *Ejecutar con PowerShell*). Ajusta todas las fotos de una
-sola vez y guarda las originales en una carpeta aparte por si acaso.
-
-También se puede hacer a mano en <https://squoosh.app>.
+En Mac también sirve la app **Vista Previa**: *Herramientas → Ajustar tamaño*.
 
 ---
 
@@ -356,42 +332,41 @@ nada.
 
 ---
 
-## 9. El formulario de contacto
+## 9. La página de contacto
 
-El formulario de `contacto.html` **no envía correos**. Arma el mensaje con lo
-que escribió el cliente y abre WhatsApp con el texto ya listo, para que solo
-tenga que darle a enviar.
+`contacto.html` **no tiene formulario, ni teléfono, ni correo.** El contacto es
+por redes sociales, que es donde el negocio ya responde todos los días.
 
-Se hizo así a propósito: un sitio de archivos sueltos no tiene un servidor
-propio que reciba mensajes, y esta forma no necesita contratar ni configurar
-nada. Además llega al celular que ya se revisa todos los días.
+Se hizo así a propósito: un sitio de archivos sueltos no tiene servidor que
+reciba mensajes, y un formulario que no contesta nadie es peor que no tenerlo.
 
-### Si prefieres recibirlos por correo
+### Cambiar los enlaces de las redes
 
-1. Crea una cuenta gratis en <https://web3forms.com> (o <https://formspree.io>).
-   Te dan una clave.
-2. En `contacto.html`, busca la línea:
+Las tres direcciones aparecen **en las 5 páginas** (en el pie de página) y
+además en el cuerpo de `contacto.html`. Si cambia alguna, hay que buscarla y
+reemplazarla en todas:
 
-   ```html
-   <form data-formulario-whatsapp novalidate>
-   ```
+```
+https://www.facebook.com/people/Se%C3%B1ora-Papa/61593310995960/
+https://www.instagram.com/senora.papa.latacunga
+https://tiktok.com/@senora.papa
+```
 
-3. Cámbiala por:
+Desde la terminal se reemplazan todas de una vez:
 
-   ```html
-   <form action="https://api.web3forms.com/submit" method="POST">
-     <input type="hidden" name="access_key" value="TU-CLAVE-AQUI">
-   ```
-
-4. Cambia el texto del botón y quita el aviso verde que habla de WhatsApp.
+```bash
+grep -rl 'senora.papa.latacunga' --include='*.html' . \
+  | xargs sed -i '' 's|senora.papa.latacunga|LA-CUENTA-NUEVA|g'
+```
 
 ---
+
 
 ## 10. Problemas frecuentes
 
 **Cambié algo y la página se ve rota.**
-Seguramente se borró un `<` o un `>`. Restaura la copia de seguridad y hazlo
-de nuevo con más calma.
+Seguramente se borró un `<` o un `>`. Si todavía no lo subiste, deshazlo con
+`git restore nombre-del-archivo.html` y vuelve a hacerlo con más calma.
 
 **Puse la foto pero no aparece.**
 Casi siempre es el nombre. Revisa que coincida **exactamente** con el del HTML:
@@ -400,10 +375,6 @@ son distintos.
 
 **Cambié el precio y sigo viendo el viejo.**
 Es la memoria del navegador. Presiona **Ctrl + F5** para recargar de cero.
-
-**El botón de WhatsApp no abre nada.**
-Revisa el número en `js/principal.js`. Tiene que ir junto, sin `+`, sin
-espacios y sin el 0 del inicio: `593987654321`.
 
 **El cartel dice "Cerrado" y sí estamos abiertos.**
 Revisa los horarios en `js/principal.js`. Se calcula con la hora de Ecuador,
