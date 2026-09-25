@@ -89,7 +89,8 @@
 
   --color-carbon:        #2B1508;  /* Texto principal                     */
   --color-gris:          #6B5A4C;  /* Texto secundario, descripciones     */
-  --color-gris-claro:    #A0907F;  /* Texto muy secundario                */
+  --color-gris-claro:    #7C6C5C;  /* Texto muy secundario. Más claro no:
+                                       baja de 4,5 de contraste.          */
   --color-crema:         #FFF9EC;  /* Fondo de secciones alternas         */
   --color-borde:         #EFE3D2;  /* Líneas y bordes                     */
   --color-blanco:        #FFFFFF;
@@ -966,7 +967,19 @@ p { text-wrap: pretty; }
   /* El texto baja a la parte de abajo, que es donde el velo es mas oscuro.
      Asi la comida se ve arriba y el titular se lee sobre el tramo oscuro. */
   .hero__slide { align-items: end; }
-  .hero__contenido { padding-bottom: var(--espacio-7); }
+
+  /* En celulares bajitos (360x640) el texto mide más que la portada y el
+     botón "Cómo llegar" quedaba cortado debajo de los puntos. Aquí la
+     portada conserva su alto de siempre, pero crece si el texto no cabe. */
+  .hero__slide {
+    height: auto;
+    max-height: none;
+    min-height: max(480px, min(72vh, 720px));
+  }
+  /* Deja aire entre los botones y los puntos del carrusel, para que el
+     dedo no toque uno queriendo tocar el otro. Lleva .hero__slide delante
+     para ganarle a la regla general de .hero__contenido, que va después. */
+  .hero__slide .hero__contenido { padding-bottom: var(--espacio-8); }
 
   /* El velo se pone vertical: oscuro abajo (el texto) y claro arriba */
   .hero__velo {
@@ -1041,19 +1054,24 @@ p { text-wrap: pretty; }
 /* --- Puntos -------------------------------------------------------------- */
 .hero__puntos {
   position: absolute;
-  bottom: var(--espacio-5);
+  bottom: calc(var(--espacio-5) - 7px);  /* compensa el relleno de los puntos */
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
   display: flex;
-  gap: var(--espacio-2);
+  gap: 0;
 }
 
+/* El punto se ve de 10px, pero el área que se puede tocar es de 24x24
+   (mínimo de WCAG 2.2): el relleno es transparente y solo se pinta el
+   centro con background-clip. */
 .hero__punto {
+  box-sizing: content-box;
   width: 10px;
   height: 10px;
-  padding: 0;
+  padding: 7px;
   background-color: rgba(255, 255, 255, 0.45);
+  background-clip: content-box;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -1190,8 +1208,13 @@ p { text-wrap: pretty; }
   max-width: 55ch;
   margin: 0 auto var(--espacio-6);
   font-size: var(--texto-lg);
-  color: rgba(255, 255, 255, 0.92);
+  /* Blanco puro: sobre este turquesa llega justo a 4,7 de contraste, y
+     con transparencia ya no alcanza el mínimo de 4,5. */
+  color: var(--color-blanco);
 }
+/* Sin el velo blanco del botón fantasma, que aclara el fondo y deja el
+   texto por debajo de 4,5 de contraste. */
+.franja-cta .boton--fantasma { background-color: transparent; }
 
 
 /* ==========================================================================

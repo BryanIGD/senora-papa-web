@@ -3,9 +3,6 @@
 # "modificado entero" aunque no se haya tocado ni una letra.
 * text=auto eol=lf
 
-# Los scripts de PowerShell se quedan con finales de línea de Windows.
-*.ps1 text eol=crlf
-
 # Las imágenes nunca se tocan.
 *.png  binary
 *.jpg  binary
