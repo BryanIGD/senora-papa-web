@@ -155,9 +155,3 @@ deployment can be restored in one click.
   object would remove the risk of them drifting apart.
 - **Self-hosted fonts and WebP/AVIF images**: the two remaining items holding
   mobile performance below 90 on the home page.
-
-## Credits
-
-Built by [Bryan](https://github.com/BryanIGD).
-The code is shared for portfolio purposes. The **Señora Papa** name, logo,
-photos and menu content belong to the restaurant and may not be reused.

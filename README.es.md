@@ -168,10 +168,3 @@ cualquier versión anterior se puede restaurar con un clic.
   de JS evitaría que se desincronicen.
 - **Fuentes propias e imágenes WebP/AVIF**: lo que falta para superar 90 de
   rendimiento en celular en la página de inicio.
-
-## Créditos
-
-Hecho por [Bryan](https://github.com/BryanIGD).
-El código se comparte como parte de un portafolio. El nombre **Señora Papa**,
-el logo, las fotos y el contenido de la carta pertenecen al restaurante y no
-se pueden reutilizar.
